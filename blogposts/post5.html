@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog posts</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: '\\(', right: '\\)', display: false},
+            {left: '\\[', right: '\\]', display: true}
+          ]
+        });"></script>
+</head>
+<body>
+
+    <div class="container">
+        <header class="profile-header">
+            <div class="intro-text">
+                <h1>My blog</h1>
+                <p class="tagline"> </p>
+            </div>
+        </header>
+      
+        <div class="colored-box">
+            <h2>My favourite child-hood riddle</h2>
+            <p> <strong>A LITTLE BACK-GROUND STORY:</strong> I encountered this problem when I was in the ending of my $8^{th}$ grade. This came, with a slight different phrasing, in an exam called SUM-IT 2020 ( It was an exam conducted by the students of ISIK as a part of their college fest. Usually, the name is MTRP but for some reasons that year the name was SUM-IT). This was the last problem of the test and was worth more than all other questions. I, not knowing much of mathematics of higher classes and being fond of detective stories and logic puzzles at that time, was highly attracted by the problem and managed to solve it completely and ended up attending my first math camp in ISI Kolkata and had the one of the best 2 days of my life. Here is the problem with a bit different phrasing that I found online.</p>
+            
+            <p><strong><span style="color: red">PROBLEM</span>:</strong> <span style="color: Blue">The famous gold-fish of the fishery of your city has been stolen. Now, you, being the best detective of your city has been hired to solve the case. You suspect the five richest aristocrats of your city who live in 5 consecutive houses each with a different nationality, having different wall colours, having different pets, drinking different beverages and smoking different cigars. But you don't know anything else.  But you can not visit any house randomly if you are not sure. So, investigating you get this set of infos about those 5 people. With the help of these can you say who is the thief?</span></p>
+        </div>
+
+        <ul class="wp-block-list">
+            <li>The <strong>BRIT</strong> lives in the house with <strong>RED</strong> walls.</li>
+            <li>The <strong>SWEDE</strong> has a <strong>DOG</strong>.</li>
+            <li>The <strong>DANE </strong>drinks <strong>TEA</strong>. </li>
+            <li>The house with <strong>GREEN </strong>walls is just <strong>left</strong> to the house with <strong>WHITE </strong>walls</li>
+            <li>The owner of the house with <strong>GREEN </strong>walls drinks<strong> COFFEE</strong>.</li>
+            <li>The person who smokes <strong>PALL MALL</strong> owns a <strong>BIRD</strong>.</li>
+            <li>The owner of the house with <strong>YELLOW </strong>walls smokes <strong>DUNHILL</strong> cigars</li>
+            <li>The man in the center house drinks <strong>MILK</strong>.</li>
+            <li>The <strong>NORWEGIAN</strong> lives in the <strong>first house</strong>.</li>
+            <li>The man who smokes<strong> BLENDES</strong> lives<strong> next </strong>to the <strong>CAT owner.</strong></li>
+            <li>The <strong>horse's</strong> owner lives next to the person smoking<strong> DUNHILL</strong>.</li>
+            <li>The man who smokes <strong>Blue Master</strong> also drinks <strong>Root Beer</strong>.</li>
+            <li>The <strong>GERMAN</strong> smokes<strong> Prince</strong>.</li>
+            <li>The <strong>NORWEGIAN</strong> lives next to the house with <strong>BLUE</strong> walls.</li>
+            <li>The man who smokes <strong>BLENDES</strong> has a next-door neighbour who drinks <strong>WATER</strong>.</li>
+        </ul>
+
+        <hr>
+
+        <p>SOLUTION: We enlist the infos we can derive from the given set of infos.</p>
+
+        <ol class="wp-block-list">
+            <li>Norwegian is in $1^{st}$ house.</li>
+            <li>The $2^{nd}$ house is blue.</li>
+            <li>As green and white are consecutive and Brit lives in red house and $2^{nd}$ house is blue so the $1^{st}$ house is Yellow.</li>
+            <li>The Norwegian smokes Dunhill.</li>
+            <li>Brit is in $3^{rd}$ house or $5^{th}$ house as Green and white are consecutive. If the $5^{th}$ house is res then center house is green but the center house owner drinks milk whereas the green house owner drinks coffee. So, Brit is in the $3^{rd}$ house</li>
+            <li>So the colour of the house walls are in order Yellow, Blue, Red, Green, White.</li>
+            <li>Brit drinks milk and $4^{th}$ house owner drinks coffee.</li>
+            <li>As $1^{st}$ house pwner smokes Dunhill so $2^{nd}$ house owner has a horse so, he cannot be Swede. Swede is $4^{th}$ or $5^{th}$.</li>
+            <li>$2^{nd}$ or $5^{th}$ house owner takes Blue Master and Root Beer together. 
+                <ul>
+                    <li>If $2^{nd}$ takes them together then Blende is taken by $4^{th}$ house owner. $5^{th}$ must drink water. $1^{st}$ i.e. Norwegian drinks tea whereas Dane drinks tea. so, $5^{th}$ takes Blue Mater and Root Beer together.</li>
+                </ul>
+            </li>
+            <li>$2^{nd}$ or $3^{rd}$ takes Blende
+                <ul>
+                    <li>If $3^{rd}$ smokes Blende then $2^{nd}$ drinks water and Norwegian drinks tea which is not possible.</li>
+                    <li>So, $2^{nd}$ smokes Blende.</li>
+                </ul>
+            </li>
+            <li>Norwegian drinks water.</li>
+            <li>$2^{nd}$ house owner drinks tea. So he is Dane.</li>
+            <li>Prince can be smoked by $3^{rd}$ or the $4^{th}$. But German smokes it and Brit is in $3^{rd}$ house. So, German is in $4^{th}$</li>
+            <li>Pall Mall is smoked by the Brit and $5^{th}$ one is Swede.</li>
+            <li>Brit has a bird</li>
+            <li>Swede has dog.</li>
+            <li>Norwegian has a cat</li>
+            <li>Dane has a Horse</li>
+            <li>So, the German has the FISH<br><br>So raid the $4^{th}$ house to say to the German, "Gib mir den Fisch, du Dieb. <br>Du bist verhaftet"</li>
+        </ol>
+
+        <figure class="wp-block-image size-large"><img src="https://ahanchak05.wordpress.com/wp-content/uploads/2024/07/img_20240702_152223.jpg?w=1024" alt="" class="wp-image-260" /></figure>
+    </div>
+</body>
+</html>

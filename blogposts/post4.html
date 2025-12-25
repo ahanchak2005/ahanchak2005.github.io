@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog posts</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false},
+        {left: '\\(', right: '\\)', display: false},
+        {left: '\\[', right: '\\]', display: true}
+      ]
+    });"></script>
+</head>
+<body>
+
+    <div class="container">
+        <header class="profile-header">
+            
+            <div class="intro-text">
+                <h1>My blog</h1>
+                <p class="tagline"> </p>
+            </div>
+        </header>
+      
+        <div class = colored-box>
+            <h2>A cool NT problem</h2>
+            <p><strong><span style="color: red">PROBLEM</span></strong>: <span style="color: blue">Let $ a $ and $ b $ be positive integers. Prove that the number of solutions $ (x,y,z)$ in non-negative integers to the equation $mx+ ny+z = mn$ is </span></p>
+            <p class="has-text-align-center">$latex \frac{1}{2}\left[ (m+1)(n+1)+\text{gcd}(m,n)+1\right]$</p>
+            <a href="blogposts/post4.html">Click here to see the solution</a>
+        </div>  
+<p><u>(<em>NOT NEARLY A FULL BUT VERY UGLY</em>) <strong>Solution with NT</strong></u> :</p>
+<p>We use the following lemma (also called the Gauss' Reciprocity Lemma) that if $p,q$ are coprime integers then </p>
+<p></p>
+<p class="has-text-align-center">
+    $$\sum\limits_{k=0}^{q-1}\lfloor\frac{kp}{q}\rfloor = \sum\limits_{k=0}^{p-1}\lfloor \frac{kq}{p}\rfloor = \frac{(p-1)(q-1)}{2}$$
+</p>
+<p>We can prove this lemma by simply noting that $kp$ are mutually incongruent in $\pmod q$ where $k\in\mathbb{N}, 0\le k \le q-1$. Now so the set of the numbers $\{\frac{kp}{q}\}$ are in some order the set of the numbers $\frac{k}{q}$. That proves the lemma.</p>
+<p>Now if we fix $x=k$ then note that $0\le y \le \lfloor\frac{m(n-k)}{n}\rfloor$. So we get the number of such possible $y$ s for a fixed value of $x$( We can always take $z$ accordingly.</p>
+<p>Now note that we can calculate the sum by using the previous lemma. If $\text{gcd}(m,n)=1$ then the problem is almost done. For other cases, the calculations will be a little lengthier(or a lot).</p>
+<p> <strong><u>A Combinatorics Solution</u></strong><u> </u>:</p>
+<p>Note that finding number of the triplets of non-negative integers so that they satisfy the equation is equivalent to finding the number of pairs of non-negative integers $(x,y)$ such that they satisfy the inequality $mx+ny\le mn$.<br>Now note that it is equivalent to finding the number of lattice points inside or on the region enclosed in the FIRST QUADRANT by the co-ordinate axes and the straight line $mx+ny=mn \text{ or, } \frac{x}{n}+\frac{y}{m} = 1$. Now say that number of such points which lie on the line $mx+ny=mn$ be $l$ and which are not on the line but lie in the region specified be $a$. Now note that by symmetry on the other half-rectangle ( not on the line ) the number of such points is also $a $. So , we know that $2a+l = (m+1)(n+1)$ (As choice of $(x,y)$ runs from $0$ to $m$ and from $0$ to $n$ respectively. </p>
+<figure class="wp-block-image aligncenter size-large is-resized"><img src="https://ahanchak05.wordpress.com/wp-content/uploads/2024/07/img_20240702_012102.jpg?w=1024" alt="" class="wp-image-232" style="width:376px;height:auto"/></figure>
+<p>Now we want to find $l$. We take that $\text{gcd}(m,n) = g$ and say $m=gm';n=gn'$ and also note that $m',n'$ are coprime. Now our new equation is $m'x+n'y= gm'n'$ Now note that $m'|n'y\implies m'|y$ as $m',n'$ are coprime. Say , $y=m'k$ for some integer $k$. Also note that as $0\le y\le m'g$ so number of choices for $k $ is $g+1$. Also note that fixing $k $ fixes $y=m'k$ and by diving both side by $m'$ we get that fixing $k$ also fixes $x$, Hence fixing $k$ fixes the pair. As number of choices of $k$ is $g+1$. So number of such pair $(x,y)$ so that $mx+ny = mn$ is $g+1$. Hence, $l=g+1$</p>
+<figure class="wp-block-image aligncenter size-large is-resized"><img src="https://ahanchak05.wordpress.com/wp-content/uploads/2024/07/img_20240702_012127.jpg?w=1024" alt="" class="wp-image-234" style="width:416px;height:auto"/></figure>
+<p>Hence $2a+2l = (m+1)(n+1)+g+1\implies \boxed{ a+l = \frac{(m+1)(n+1)+g+1}{2}}$ </p></body>
+</html>
