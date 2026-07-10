@@ -1,99 +1,72 @@
-/* 1. General Page Setup */
+/* 1. Global Dark Theme */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d1117; /* Deep, professional dark background */
+    color: #c9d1d9;            /* Crisp light gray text */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
-    color: #1a1111;
-    background-color: #5a6478;
     margin: 0;
-    padding: 40px 20px;
+    padding: 60px 20px;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* 2. The Main White Card */
+/* 2. The Container - Visual box deleted, acts only as a structural wrapper */
 .container {
     max-width: 850px;
     margin: auto;
-    background: #fff;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background: transparent; /* Deletes the white background */
+    box-shadow: none;        /* Deletes the shadow */
+    border: none;            /* Deletes any borders */
+    padding: 0;              
 }
 
-/* 3. Header Section (Image + Text Side-by-Side) */
-.profile-header {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-}
-
-.profile-pic {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #0056b3;
-}
-
-.intro-text h1 {
-    margin: 0;
-    color: #0056b3;
-    font-size: 2.2rem;
-}
-
-.tagline {
-    font-size: 1.1rem;
-    color: #666;
-    font-style: italic;
-}
-
-/* 4. Headings & Lists */
-h2 {
-    color: #2c3e50;
-    border-left: 5px solid #0056b3;
-    padding-left: 15px;
-    margin-top: 30px;
-}
-
-.boxed-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    list-style-type: "→ ";
-}
-
-/* 5. The "Ghat" Warning Box */
-.colored-box {
-    background-color: #e7f3ff;
-    border-radius: 8px;
-    padding: 20px;
-    margin-top: 30px;
-    border: 1px dashed #0056b3;
-}
-
-.colored-box strong {
-    color: #0056b3;
-}
-
-/* 6. Footer */
-footer {
-    text-align: center;
+/* 3. Headings & The Red Line */
+h1, h2 {
+    color: #ffffff; /* Pure white headings for strong contrast */
     margin-top: 40px;
-    font-size: 0.9rem;
-    color: #888;
+    margin-bottom: 15px;
 }
 
-/* 7. Mobile View (Stacking things vertically on phones) */
-@media (max-width: 600px) {
-    .profile-header {
-        flex-direction: column;
-        text-align: center;
-    }
-    .academic-list {
-        grid-template-columns: 1fr;
-    }
+hr {
+    border: 0;
+    border-bottom: 1px solid #30363d; /* Replaces the bright red line with a sleek dark divider */
+    margin: 20px 0 30px 0;
+}
+
+/* 4. Content Boxes (Fixing the pale red text) */
+.colored-box {
+    background-color: #161b22; /* Very subtle dark slate to separate sections */
+    border: 1px solid #30363d; /* Sharp, minimal border */
+    border-radius: 6px;
+    padding: 25px;
+    margin-bottom: 30px;
+    
+    /* THIS FIXES THE PALE RED TEXT */
+    color: #c9d1d9; 
+}
+
+/* Forces any paragraph tags inside the box to inherit the clean color */
+.colored-box p {
+    color: #c9d1d9; 
+    margin-top: 0;
+}
+
+/* 5. Professional Links */
+a {
+    color: #58a6ff; /* A clean, modern blue that is highly readable in dark mode */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #79c0ff;
+}
+
+/* List styling inside the boxes */
+.colored-box ul {
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+
+.colored-box li {
+    margin-bottom: 8px;
 }
