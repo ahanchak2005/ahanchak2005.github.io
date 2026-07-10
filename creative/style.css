@@ -1,72 +1,215 @@
-/* 1. Global Dark Theme */
+/* 1. Global Dark Theme (Matching Screenshot 1) */
 body {
-    background-color: #0d1117; /* Deep, professional dark background */
-    color: #c9d1d9;            /* Crisp light gray text */
+    background-color: #22272e; /* Deep, professional slate dark background */
+    color: #adbac7;            /* Crisp light gray text */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
+    line-height: 1.7;
     margin: 0;
     padding: 60px 20px;
     -webkit-font-smoothing: antialiased;
 }
 
-/* 2. The Container - Visual box deleted, acts only as a structural wrapper */
-.container {
-    max-width: 850px;
-    margin: auto;
-    background: transparent; /* Deletes the white background */
-    box-shadow: none;        /* Deletes the shadow */
-    border: none;            /* Deletes any borders */
-    padding: 0;              
+/* 2. Layout & Arrangement (Matching Screenshot 2) */
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 50px;
+    align-items: flex-start;
 }
 
-/* 3. Headings & The Red Line */
-h1, h2 {
-    color: #ffffff; /* Pure white headings for strong contrast */
-    margin-top: 40px;
-    margin-bottom: 15px;
+/* 3. Header & Navigation */
+.header-section {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-hr {
+/* Using sans-serif instead of typewriter to match the modern theme of SS1 */
+.header-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    color: #cdd9e5; /* Bright gray/white for the title */
+}
+
+.nav-links {
+    font-size: 1.1rem;
+    color: #adbac7;
+}
+
+.nav-links a {
+    color: #adbac7;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #76e3ea; /* Teal hover effect */
+    text-decoration: underline;
+}
+
+.nav-separator {
+    color: #444c56; /* Subtle dark gray for the bullet points */
+    margin: 0 4px;
+}
+
+hr, .divider {
+    max-width: 900px;
+    margin: 40px auto;
     border: 0;
-    border-bottom: 1px solid #30363d; /* Replaces the bright red line with a sleek dark divider */
-    margin: 20px 0 30px 0;
+    border-top: 1px solid #444c56; /* Sleek dark divider line */
 }
 
-/* 4. Content Boxes (Fixing the pale red text) */
-.colored-box {
-    background-color: #161b22; /* Very subtle dark slate to separate sections */
-    border: 1px solid #30363d; /* Sharp, minimal border */
-    border-radius: 6px;
-    padding: 25px;
-    margin-bottom: 30px;
-    
-    /* THIS FIXES THE PALE RED TEXT */
-    color: #c9d1d9; 
+/* 4. Content Columns */
+.text-column {
+    flex: 1;
+    font-size: 1.05rem;
 }
 
-/* Forces any paragraph tags inside the box to inherit the clean color */
-.colored-box p {
-    color: #c9d1d9; 
+.text-column p {
     margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.image-column {
+    flex-shrink: 0;
+}
+
+.image-column img {
+    width: 260px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px; /* Slight rounding for a polished modern look */
 }
 
 /* 5. Professional Links */
-a {
-    color: #58a6ff; /* A clean, modern blue that is highly readable in dark mode */
+.text-column a {
+    color: #76e3ea; /* Teal link color matching the text links in SS1 */
     text-decoration: none;
 }
 
-a:hover {
+.text-column a:hover {
     text-decoration: underline;
-    color: #79c0ff;
+    color: #539bf5; /* Lighter blue on hover */
 }
 
-/* List styling inside the boxes */
-.colored-box ul {
-    margin-bottom: 0;
-    padding-left: 20px;
+/* 6. Footer Styling */
+footer {
+    text-align: center;
+    color: #768390;
+    font-size: 0.9rem;
+    padding-bottom: 30px;
 }
 
-.colored-box li {
-    margin-bottom: 8px;
+footer a {
+    color: #768390;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #adbac7;
+}
+
+/* 7. Responsive Design */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column-reverse; /* Puts image above text on mobile devices */
+        align-items: center;
+    }
+}
+/* =========================================
+   ABOUT ME PAGE SPECIFIC STYLES
+   ========================================= */
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Dostoevsky Quote Styling */
+.dostoevsky-quote {
+    font-family: Georgia, serif;
+    background-color: #1c2128; /* Slightly lighter than the background */
+    border-left: 4px solid #76e3ea; /* Matches the teal link color */
+    padding: 25px 30px;
+    margin: 0 0 40px 0;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.dostoevsky-quote p {
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-top: 0;
+    color: #cdd9e5;
+}
+
+.dostoevsky-quote strong {
+    color: #539bf5; /* Blue highlight for "Of himself" */
+}
+
+.dostoevsky-quote footer {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    text-align: left;
+    padding-bottom: 0;
+    color: #768390;
+}
+
+.dostoevsky-quote cite {
+    color: #adbac7;
+}
+
+/* Tag Cloud for Interests */
+.interest-tags {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0 35px 0;
+}
+
+.interest-tags li {
+    background-color: #2d333b;
+    color: #76e3ea; /* Teal text */
+    padding: 8px 18px;
+    border-radius: 20px; /* Makes them pill-shaped */
+    font-size: 0.95rem;
+    border: 1px solid #444c56;
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.interest-tags li:hover {
+    background-color: #444c56;
+    color: #cdd9e5;
+    transform: translateY(-2px);
+}
+
+/* Location Callout Box */
+.location-box {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 40px 0;
+    border-left: 4px solid #d29922; /* Warm gold accent for location */
+    line-height: 1.7;
+}
+
+.location-box strong {
+    color: #d29922;
+}
+
+/* Subtle Outro Text */
+.outro-text {
+    text-align: center;
+    font-style: italic;
+    color: #768390;
+    margin-top: 40px;
 }

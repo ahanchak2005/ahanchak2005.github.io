@@ -3,108 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>creative | B.Stat ISI</title>
+    <title>Interests | B.Stat ISI</title>
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Supplementary layout styles adapted for your Dark Theme -->
+    <style>
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .category-block {
+            margin-bottom: 50px;
+        }
+
+        .section-header h1 {
+            font-size: 1.8rem;
+            color: #cdd9e5; /* Bright gray matching your header */
+            margin-bottom: 5px;
+            border-bottom: 1px solid #444c56; /* Subtle dark divider */
+            padding-bottom: 10px;
+            display: block;
+        }
+
+        .tagline {
+            font-size: 1.05rem;
+            color: #768390; /* Muted text */
+            font-style: italic;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Box Layouts using theme colors */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .colored-box {
+            background-color: #161b22; /* Matching your location-box */
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 25px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .colored-box:hover {
+            border-color: #444c56;
+            transform: translateY(-2px);
+        }
+
+        .colored-box h3 {
+            margin-top: 0;
+            color: #76e3ea; /* Teal accent matching your links */
+            font-size: 1.3rem;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* Lists and Typography */
+        ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        ul.wp-block-list {
+            list-style-type: square;
+            color: #adbac7;
+        }
+
+        ul.wp-block-list li {
+            margin-bottom: 8px;
+        }
+
+        .english-list ul {
+            column-count: 2;
+            column-gap: 40px;
+        }
+
+        .colored-box p {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #adbac7;
+        }
+
+        .colored-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 600px) {
+            .english-list ul {
+                column-count: 1;
+            }
+        }
+    </style>
 </head>
 <body>
 
+    <!-- Optional: Header matching your CSS structure to tie the site together -->
+    <header class="header-section">
+        <h1>Interests & Hobbies</h1>
+        <div class="nav-links">
+            <a href="about.html">About me</a> <span class="nav-separator">&bull;</span>
+                  <a href="courses.html">Courses</a> <span class="nav-separator">&bull;</span>
+            
+            <a href="cv.html">CV</a> <span class="nav-separator">&bull;</span>
+            <a href="index.html">Home</a> <span class="nav-separator">&bull;</span>
+            <a href="resources.html">Resources</a> 
+        </div>
+    </header>
+
     <div class="container">
-        <header class="profile-header">
-            <div class="intro-text">
-                <h1>A list of my favourite movies </h1>
-                <p class="tagline"> Here are some movies that I liked </p>
+        
+        <!-- Books Section -->
+        <section class="category-block">
+            <header class="section-header">
+                <h1>I like to read novels, mainly fiction.</h1>
+            </header>
+            <div class="colored-box">
+                <p class="tagline">Some of my favorite writers are:</p>
+                <p>Rabindranath Tagore, Fyodor Dostoevsky, Sarat Chandra Chattopadhyay, Bankim Chandra Chattopadhyay, Bibhutibhushan Bandyopadhyay, Shankar, Khaled Hosseini, Friedrich Nietzsche, Haruki Murakami, and Dan Brown.</p>
+                <p>I also enjoy reading the humorous mythological series by Nikhad Bangali (Sampad Barik) very much.</p>
             </div>
-        </header>
+        </section>
 
-      <hr>
-      <div class=colored-box>
-       <h3>English</h3>
-            <ul class="wp-block-list">
-                <li>The Shawshank Redemption</li>
-                <li>Stand by Me</li>
-                <li>The Terminal</li>
-                <li>Forrest Gump</li>
-                <li>The Boy in the Striped Pyjamas</li>
-                <li>Atonement</li>
-                <li>Schindler's List</li>
-                <li>Glass</li>
-                <li>The Sixth Sense</li>
-                <li>Split</li>
-                <li>Interstellar</li>
-                <li>The Prestige</li>
-                <li>The Godfather Part 1</li>
-                <li>Inception</li>
-                <li>Now You See Me</li>
-                <li>(500) Days of Summer</li>
-                <li>Dunkirk</li>
-                <li> Oppenheimer </li>
-                <li> Dark Knight </li>
-                <li>One day </li>
-                <li>La La Land</li>
-                <li>Eternal Sunshine of the Spotless Mind</li>
-                <li>Sleepless in Seattle</li>
-                <li>A Beautiful Mind</li>
-                <li>Good Will Hunting</li>
-                <li>Pride & Prejudice</li>
-                <li>Jojo Rabbit</li>
-                <li>The Silence of the Lambs</li>
-                <li>A Few Good Men</li>
-                <li>Modern Times</li>
-                <li>The Kid</li>
-                <li>The Great Dictator</li>
-                <li>Whiplash</li>
-                <li>X-men</li>
-                <li></li>
-            </ul>
-        </div>
+        <!-- Movies Section -->
+        <section class="category-block">
+            <header class="section-header">
+                <h1>A list of my favourite movies</h1>
+                <p class="tagline">Here are some movies that I have watched and liked:</p>
+            </header>
 
-        <div class="colored-box">
-            <h3>Bengali</h3>
-            <ul class="wp-block-list">
-                <li>Pather Panchali</li>
-                <li>Aparajito</li>
-                <li>Apur Sansar</li>
-                <li>Agantuk</li>
-                <li>Joy Baba Felunath</li>
-                <li>Sonar Kella </li>
-                
-                <li>Meghe Dhaka Tara</li>
-                <li>Sotti Bole Sotti Kichu Nei</li>
-                <li>Hemlock Society</li>
-            </ul>
-        </div>
+            <div class="colored-box english-list">
+                <h3>English</h3>
+                <ul class="wp-block-list">
+                    <li>The Brutalist</li>        
+                    <li>Taxi Driver</li>
+                    <li>Goodfellas</li>
+                    <li>Catch Me If You Can</li>
+                    <li>Shutter Island</li>
+                    <li>Inglourious Basterds</li>
+                    <li>Once Upon a Time in Hollywood</li>
+                    <li>Parasite</li>
+                    <li>Joker</li>
+                    <li>The Perks of Being a Wallflower</li>
+                    <li>The Shawshank Redemption</li>
+                    <li>Stand by Me</li>
+                    <li>The Terminal</li>
+                    <li>Forrest Gump</li>
+                    <li>The Boy in the Striped Pyjamas</li>
+                    <li>Atonement</li>
+                    <li>Schindler's List</li>
+                    <li>Glass</li>
+                    <li>The Sixth Sense</li>
+                    <li>Split</li>
+                    <li>Interstellar</li>
+                    <li>The Prestige</li>
+                    <li>The Godfather Part 1</li>
+                    <li>Inception</li>
+                    <li>Now You See Me</li>
+                    <li>(500) Days of Summer</li>
+                    <li>Dunkirk</li>
+                    <li>Oppenheimer</li>
+                    <li>The Dark Knight</li>
+                    <li>One Day</li>
+                    <li>La La Land</li>
+                    <li>Eternal Sunshine of the Spotless Mind</li>
+                    <li>Sleepless in Seattle</li>
+                    <li>A Beautiful Mind</li>
+                    <li>Good Will Hunting</li>
+                    <li>Pride & Prejudice</li>
+                    <li>Jojo Rabbit</li>
+                    <li>The Silence of the Lambs</li>
+                    <li>A Few Good Men</li>
+                    <li>Modern Times</li>
+                    <li>The Kid</li>
+                    <li>The Great Dictator</li>
+                    <li>Whiplash</li>
+                    <li>X-Men</li>
+                </ul>
+            </div>
 
-        <div class="colored-box">
-            <h3>Hindi</h3>
-            <ul class="wp-block-list">
-                <li>Maqbool</li>
-                <li>The Lunchbox</li>
-                <li>Anand</li>
-                <li>Jab We Met</li>
-                <li>Life in a... Metro</li>
-            </ul>
-        </div>
+            <div class="grid-container">
+                <div class="colored-box">
+                    <h3>Bengali</h3>
+                    <ul class="wp-block-list">
+                        <li>Pather Panchali</li>
+                        <li>Aparajito</li>
+                        <li>Apur Sansar</li>
+                        <li>Agantuk</li>
+                        <li>Joy Baba Felunath</li>
+                        <li>Sonar Kella </li>
+                        <li>Charulata</li>
+                        <li>Jalsaghar</li>
+                        <li>Nayak</li>
+                        <li>Meghe Dhaka Tara</li>
+                        <li>Sotti Bole Sotti Kichu Nei</li>
+                        <li>Hemlock Society</li>
+                    </ul>
+                </div>
 
-        <div class="colored-box">
-            <h3>Italian</h3>
-            <ul class="wp-block-list">
-                <li>La Vita è Bella (Life is Beautiful)</li>
-                <li>Bicycle Thieves (Ladri di biciclette)</li>
-            </ul>
-        </div>
+                <div class="colored-box">
+                    <h3>Hindi</h3>
+                    <ul class="wp-block-list">
+                        <li>Guide</li>
+                        <li>Tamasha</li>
+                        <li>Kahani</li>
+                        <li>Bajirao Mastani</li>
+                        <li>Maqbool</li>
+                        <li>The Lunchbox</li>
+                        <li>Anand</li>
+                        <li>Jab We Met</li>
+                        <li>Life in a... Metro</li>
+                    </ul>
+                </div>
+
+                <div class="colored-box">
+                    <h3>Others</h3>
+                    <ul class="wp-block-list">
+                        <li>La Vita è Bella (Life is Beautiful)</li>
+                        <li>Bicycle Thieves (Ladri di biciclette)</li>
+                        <li>All Quiet on the Western Front</li>
+                        <li>The Children's Train</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Web Series Section -->
+        <section class="category-block">
+            <header class="section-header">
+                <h1>A list of my favourite web series</h1>
+            </header>
+            <div class="colored-box">
+                <p>I am too impatient to watch long TV or web series and find them a bit addictive. Here are the only three series I have watched and liked very much (which is why I finished them):</p>
+                <ul class="wp-block-list">
+                    <li>Loki</li>
+                    <li>Sherlock</li>
+                    <li>How I Met Your Mother</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Music Section -->
+        <section class="category-block">
+            <header class="section-header">
+                <h1>I like to listen to and sing music of almost any kind.</h1>
+            </header>
+            <div class="colored-box">
+                <p>It is useless to try to list my favorite musicians! I like almost any old Bollywood song by Mohammed Rafi, Kishore Kumar, Manna Dey, Lata Mangeshkar, Asha Bhosle, and many more. I also enjoy any piece of Indian Classical Music, in which I am currently an active trainee.</p>
+                <p>Bob Dylan is also very close to my heart. Recently, I have started listening to old English bands like Queen and The Beatles as well.</p>
+            </div>
+        </section>
+
     </div>
-    
-    <div class="container">
-        <header class="profile-header">
-            <div class="intro-text">
-                <h1>A list of my favourite web series </h1>
-                <p class="tagline">  I am too impatient to see a long tv/web-series and find them a bit addictive. Here are the only three series I have watched and liked very much ( and that's why watched them):
 
-                </p>
-                <ul><li>Loki</li><li>Sherlock</li>
-                <li>How I met your mother</li></ul>
-            </div>
-        </header>
+    <!-- Optional Footer -->
+    <footer>
+        <p>&copy; 2026 Ahan Chak</p>
+    </footer>
 
 </body>
 </html>
